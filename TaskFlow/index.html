@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>TaskFlow</h1>
+      <p id="summary">Plan today, one task at a time.</p>
+    </header>
+
+    <!-- Progress -->
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p id="progressText">0 of 0 complete</p>
+
+    <!-- Add task -->
+    <div class="add">
+      <input type="text" id="taskInput" placeholder="What are you planning to do?">
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn">Add task</button>
+    </div>
+
+    <!-- Search and filters -->
+    <div class="tools">
+      <input type="search" id="searchInput" placeholder="Search tasks">
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="done">Done</button>
+      </div>
+    </div>
+
+    <ul id="taskList"></ul>
+    <button id="clearBtn">Clear completed</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
