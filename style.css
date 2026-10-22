@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f6f5;
+  color: #12212b;
+}
+
+.app { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin: 0; font-size: 2.5rem; letter-spacing: -0.03em; }
+
+/* Progress bar */
+.progress { height: 10px; background: #dbe4e2; border-radius: 99px; overflow: hidden; margin-top: 20px; }
+.progress-bar { height: 100%; width: 0%; background: #12a37f; transition: width 0.4s ease; }
+
+/* Inputs and buttons */
+.add, .tools { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+input[type="text"], input[type="search"], select {
+  padding: 10px 12px; border: 1px solid #dbe4e2; border-radius: 10px;
+  background: #fff; font: inherit;
+}
+#taskInput, #searchInput { flex: 1 1 200px; }
+button { font: inherit; cursor: pointer; border: 0; border-radius: 10px; padding: 10px 16px; }
+#addBtn { background: #12a37f; color: #fff; font-weight: 600; }
+.filter { background: #fff; border: 1px solid #dbe4e2; }
+.filter.active { background: #dff4ed; font-weight: 600; }
+#clearBtn { background: none; color: #5d6f78; text-decoration: underline; }
+
+/* Task list */
+ul { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; }
+li {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  background: #fff; border: 1px solid #dbe4e2; border-left: 5px solid #dbe4e2;
+  border-radius: 12px;
+}
+li.high { border-left-color: #d9534a; }
+li.medium { border-left-color: #d9a21f; }
+li.low { border-left-color: #4a8fd9; }
+li.done .text { text-decoration: line-through; color: #5d6f78; }
+.text { flex: 1; overflow-wrap: anywhere; }
+.delete { background: none; color: #5d6f78; font-size: 1.2rem; padding: 4px 8px; }
+.delete:hover { color: #c4402f; }
+.empty { text-align: center; color: #5d6f78; padding: 32px 0; }
