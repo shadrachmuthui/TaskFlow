@@ -3,8 +3,13 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #f3f6f5;
+  background: #FFF4D6;
   color: #12212b;
+}
+section{
+  background: #dbe4e2;
+  color: #12212b;
+  border-radius: 10px;
 }
 
 .app { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
